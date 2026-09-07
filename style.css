@@ -1,0 +1,124 @@
+/* Simple colors make the design easy to customize. */
+:root {
+	--ink: #192a35;
+	--deep: #173a43;
+	--lavender: #bdb1e8;
+	--lavender-light: #e5def5;
+	--paper: #f7f3ee;
+	--white: #fffdf9;
+	--muted: #6c7477;
+	--line: rgba(25, 42, 53, .18);
+	--serif: Georgia, 'Times New Roman', serif;
+	--sans: 'Trebuchet MS', Verdana, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.section-wrap { width: min(1120px, calc(100% - 80px)); margin: 0 auto; }
+.site-header { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; padding: 28px 40px; width: min(1280px, 100%); }
+.logo { color: var(--ink); font-size: 1.35rem; font-weight: bold; letter-spacing: .08em; }
+.logo span, em { color: #8e79cb; }
+nav { align-items: center; display: flex; gap: 25px; font-size: .78rem; letter-spacing: .03em; }
+nav a { align-items: center; color: var(--muted); display: flex; gap: 6px; }
+nav .material-symbols-outlined { font-size: 1.15rem; font-variation-settings: 'wght' 400; }
+nav a:hover, .text-link:hover { color: #7c64bd; }
+.nav-contact { border-bottom: 1px solid var(--ink); color: var(--ink); padding-bottom: 4px; }
+.hero { align-items: center; display: flex; justify-content: space-between; min-height: 610px; padding: 55px 0 85px; }
+.hero-copy { max-width: 655px; }
+.eyebrow { align-items: center; color: #7868aa; display: flex; font-size: .7rem; font-weight: bold; gap: 12px; letter-spacing: .15em; margin: 0 0 25px; text-transform: uppercase; }
+.eyebrow-line { background: #9d8bd1; display: inline-block; height: 1px; width: 42px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: var(--serif); font-weight: normal; letter-spacing: -.045em; line-height: 1.02; }
+h1 { font-size: clamp(3.7rem, 7vw, 6.9rem); margin-bottom: 28px; max-width: 700px; }
+.hero-intro { color: var(--muted); font-size: 1.05rem; max-width: 450px; }
+.hero-links { align-items: center; display: flex; gap: 28px; margin-top: 38px; }
+.button { display: inline-block; font-size: .78rem; font-weight: bold; letter-spacing: .03em; padding: 15px 22px; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-3px); }
+.button-light { background: var(--lavender); }
+.button-dark { background: var(--deep); color: var(--white); }
+.text-link { border-bottom: 1px solid currentColor; display: inline-block; font-size: .78rem; font-weight: bold; padding-bottom: 5px; }
+.portrait-wrap { margin-right: 55px; position: relative; width: 340px; }
+.portrait { border-radius: 50% 50% 7px 50%; filter: saturate(.85); height: 340px; object-fit: cover; position: relative; width: 340px; z-index: 1; }
+.portrait-wrap:before { border: 1px solid #a999d4; border-radius: 50%; content: ''; height: 340px; left: 21px; position: absolute; top: 22px; width: 340px; }
+.portrait-note { background: var(--lavender); bottom: -30px; font-family: var(--serif); font-size: .95rem; line-height: 1.25; padding: 14px 18px; position: absolute; right: -47px; transform: rotate(5deg); z-index: 2; }
+.portrait-note strong { font-size: 1.1rem; }
+.portrait-star { color: #8e79cb; font-size: 2rem; left: -40px; position: absolute; top: 8px; }
+.quick-facts { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); display: flex; justify-content: space-between; padding: 25px 0; }
+.quick-facts div { align-items: baseline; display: flex; gap: 14px; padding-right: 35px; }
+.quick-facts strong { font-family: var(--serif); font-size: 1.1rem; font-weight: normal; }
+.quick-facts span:last-child { color: var(--muted); font-size: .78rem; }
+.fact-label, .item-date, .project-type { color: #927dcc; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.content-section, .skills-section, .projects-section { display: flex; gap: 12%; padding-bottom: 135px; padding-top: 135px; }
+.section-heading { flex: 0 0 35%; }
+h2 { font-size: clamp(2.7rem, 5vw, 4.7rem); margin-bottom: 0; }
+.education-list, .skills-list { flex: 1; }
+.timeline-item { border-top: 1px solid var(--line); display: flex; gap: 35px; padding: 26px 0 31px; }
+.timeline-item:last-child { border-bottom: 1px solid var(--line); }
+.item-date { flex: 0 0 100px; margin: 5px 0; }
+h3 { font-family: var(--serif); font-size: 1.65rem; font-weight: normal; line-height: 1.15; margin-bottom: 8px; }
+.timeline-item p:not(.item-date), .experience-item li, .project-info p, .projects-intro > p { color: var(--muted); font-size: .9rem; margin-bottom: 8px; }
+.muted { font-size: .78rem !important; }
+.experience-band { background: var(--deep); color: var(--white); padding: 125px 0; }
+.light-heading h2 { color: var(--white); }
+.light-heading .eyebrow { color: var(--lavender); }
+.experience-list { flex: 1; }
+.experience-band .section-wrap { display: flex; gap: 12%; }
+.experience-item { border-top: 1px solid rgba(255,255,255,.25); display: flex; gap: 45px; padding: 30px 0; }
+.role-heading { flex: 0 0 230px; }
+.role-heading h3 { margin-bottom: 5px; }
+.role-heading p, .role-heading span { color: var(--lavender); font-size: .75rem; margin-bottom: 4px; }
+.experience-item ul { margin: 0; padding-left: 18px; }
+.experience-item li { color: #d7dddd; margin-bottom: 6px; }
+.skills-section { border-bottom: 1px solid var(--line); }
+.skill-row { border-top: 1px solid var(--line); display: flex; gap: 30px; padding: 18px 0; }
+.skill-row:last-child { border-bottom: 1px solid var(--line); }
+.skill-row span { color: #7868aa; flex: 0 0 180px; font-size: .7rem; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+.skill-row p { color: var(--muted); font-size: .9rem; margin: 0; }
+.projects-section { display: block; }
+.projects-intro { align-items: end; display: flex; justify-content: space-between; margin-bottom: 60px; }
+.projects-intro h2 { flex: 1; }
+.projects-intro > p { max-width: 270px; }
+.project-cards { align-items: start; display: flex; gap: 35px; }
+.project-card { background: var(--white); }
+.project-card-main { flex: 1.2; }
+.project-card-small { background: var(--lavender-light); flex: .8; margin-top: 90px; }
+.project-image { height: 280px; overflow: hidden; position: relative; }
+.project-image img { height: 100%; object-fit: cover; transition: transform .4s; width: 100%; }
+.project-card:hover .project-image img { transform: scale(1.04); }
+.project-image span { background: var(--white); bottom: 15px; font-size: .7rem; padding: 7px 10px; position: absolute; right: 15px; }
+.project-info { padding: 27px 30px 33px; }
+.project-info h3 { font-size: 2rem; }
+.project-number { color: #8e79cb; font-family: var(--serif); font-size: 4rem; padding: 25px 30px 0; }
+.contact-section { padding-bottom: 140px; padding-top: 60px; text-align: center; }
+.contact-section .eyebrow { justify-content: center; }
+.contact-section h2 { margin: 0 auto 35px; }
+.site-footer { align-items: center; border-top: 1px solid var(--line); display: flex; justify-content: space-between; padding-bottom: 30px; padding-top: 25px; }
+.site-footer p, .site-footer > a:last-child { color: var(--muted); font-size: .72rem; }
+
+/* On smaller screens, columns become stacked so the content stays readable. */
+@media (max-width: 760px) {
+	.section-wrap { width: min(100% - 40px, 600px); }
+	.site-header { padding: 22px 20px; }
+	nav { gap: 12px; }
+	nav > a:not(.nav-contact) { display: none; }
+	.hero { display: block; padding-top: 55px; }
+	h1 { font-size: 3.65rem; }
+	.portrait-wrap { margin: 70px auto 45px; width: 250px; }
+	.portrait, .portrait-wrap:before { height: 250px; width: 250px; }
+	.portrait-note { right: -34px; }
+	.quick-facts, .content-section, .experience-band .section-wrap, .skills-section { display: block; }
+	.quick-facts div { padding: 8px 0; }
+	.content-section, .skills-section, .projects-section { padding-bottom: 80px; padding-top: 80px; }
+	.section-heading { margin-bottom: 45px; }
+	.experience-band { padding: 80px 0; }
+	.experience-item { display: block; }
+	.role-heading { margin-bottom: 20px; }
+	.projects-intro { align-items: start; display: block; margin-bottom: 35px; }
+	.projects-intro > p { margin-top: 25px; }
+	.project-cards { display: block; }
+	.project-card-small { margin-top: 25px; }
+	.site-footer { align-items: start; flex-direction: column; gap: 14px; }
+}
